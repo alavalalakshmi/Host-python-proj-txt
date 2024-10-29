@@ -1,0 +1,40 @@
+(Need to create virtual environment for each project, to run it on aws ec2 server)
+Create a virtual environment on aws ec2 server for python django project
+
+(Few installation steps on aws ec2 for python django api project)
+sudo apt update
+sudo apt install python3 python3-pip
+git clone https://github.com/your_username/your_project.git
+cd your_project
+pip install -r requirements.txt
+
+Bash
+python3 -m venv my_venv
+source my_venv/bin/activate
+
+python manage.py runserver    ------- cmd to run django python project
+
+python manage.py runserver 0.0.0.0:8000   (cmd to run python django project on aws ec2 instance)
+
+
+
+Create a virtual environment on aws ec2 server for python fast api project
+
+python3 -m venv app2_fast_api_env
+source app2_fast_api_env/bin/activate
+
+(Few installation steps on aws ec2 for python fast api project)
+git clone https://github.com/your_username/your_project.git
+cd your_project
+pip install -r requirements.txt
+pip install fastapi uvicorn
+
+
+
+uvicorn main:app --reload (cmd to run python fast api project)
+
+uvicorn main:app --host 0.0.0.0 --port 8000 (cmd to run python fast api project on aws ec2 instance) 
+
+http://16.171.166.153:8000/  is aws url (with ec2 ip address and port 8000)
+
+
